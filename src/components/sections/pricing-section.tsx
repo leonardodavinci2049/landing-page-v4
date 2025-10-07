@@ -84,7 +84,7 @@ export default function PricingSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Planos Flexíveis para o Seu Projeto
             </h2>
-            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+            <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
               Entendemos que cada projeto tem um orçamento e necessidades
               específicas. Oferecemos modelos de contratação flexíveis para se
               adequar à sua demanda.
@@ -131,7 +131,7 @@ export default function PricingSection() {
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-500 dark:text-cyan-400" />
-                          <span className="text-sm text-slate-700 dark:text-slate-300">
+                          <span className="text-sm text-slate-800 dark:text-slate-300">
                             {feature}
                           </span>
                         </li>
@@ -168,7 +168,7 @@ export default function PricingSection() {
                   className="flex items-center gap-3 rounded-lg bg-slate-50 p-4 transition-colors hover:bg-cyan-50 dark:bg-slate-900/50 dark:hover:bg-cyan-900/20"
                 >
                   <div className="h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400"></div>
-                  <span className="text-slate-700 dark:text-slate-300">
+                  <span className="text-slate-800 dark:text-slate-300">
                     {addon}
                   </span>
                 </div>

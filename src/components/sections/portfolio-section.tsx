@@ -68,7 +68,7 @@ export default function PortfolioSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Projetos de Sucesso
             </h2>
-            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+            <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
               Nossa experiência se traduz em resultados concretos. Explore
               alguns dos projetos que desenvolvemos.
             </p>
@@ -109,7 +109,7 @@ export default function PortfolioSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mb-4 leading-relaxed text-slate-600 dark:text-slate-300">
+                  <p className="mb-4 leading-relaxed text-slate-700 dark:text-slate-300">
                     {project.description}
                   </p>
 
@@ -158,7 +158,7 @@ export default function PortfolioSection() {
 
           {/* Bottom CTA */}
           <div className="text-center">
-            <p className="mb-6 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mb-6 text-lg text-slate-700 dark:text-slate-400">
               Quer ver mais projetos ou discutir como podemos ajudar seu
               negócio?
             </p>

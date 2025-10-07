@@ -44,7 +44,7 @@ export default function AboutSection() {
           <div className="mb-16 grid items-center gap-12 lg:grid-cols-2">
             {/* Left Column - Text */}
             <div>
-              <p className="mb-6 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+              <p className="mb-6 text-lg leading-relaxed text-slate-800 dark:text-slate-300">
                 Com anos de experiência em desenvolvimento Full-Stack, sou
                 especialista em criar
                 <strong className="text-slate-900 dark:text-slate-100">
@@ -54,7 +54,7 @@ export default function AboutSection() {
                 utilizando as tecnologias mais modernas do mercado, como React,
                 Next.js e TypeScript.
               </p>
-              <p className="mb-8 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+              <p className="mb-8 text-lg leading-relaxed text-slate-800 dark:text-slate-300">
                 Meu foco é entregar soluções que não apenas atendam, mas{" "}
                 <strong className="text-slate-900 dark:text-slate-100">
                   superem as expectativas do seu negócio
@@ -73,7 +73,7 @@ export default function AboutSection() {
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-0.5 h-6 w-6 flex-shrink-0 text-cyan-500" />
-                    <span className="text-slate-700 dark:text-slate-300">
+                    <span className="text-slate-800 dark:text-slate-300">
                       {point}
                     </span>
                   </div>
@@ -123,7 +123,7 @@ export default function AboutSection() {
                   <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-400">
                     {item.description}
                   </p>
                 </div>
