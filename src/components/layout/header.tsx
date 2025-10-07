@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import ModeToggle from "../theme/mode-toggle";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,16 +69,18 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <ModeToggle />
-            <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-              Solicitar Orçamento
-            </Button>
+            <Link href="#contato">
+              <Button className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 cursor-pointer">
+                Solicitar Orçamento
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Actions */}
           <div className="flex lg:hidden items-center gap-2">
             <ModeToggle />
             <button
-              className="text-white p-2"
+              className="text-white p-2 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -105,9 +108,11 @@ export default function Header() {
                     {link.label}
                   </a>
                 ))}
-                <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4">
-                  Solicitar Orçamento
-                </Button>
+                <Link href="#contato">
+                  <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4">
+                    Solicitar Orçamento
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
