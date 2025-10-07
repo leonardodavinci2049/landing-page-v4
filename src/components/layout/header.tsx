@@ -108,7 +108,7 @@ export default function Header() {
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-900/95 shadow-lg backdrop-blur-md"
+          ? "border-b border-slate-800/50 bg-slate-900/95 shadow-2xl shadow-slate-950/50 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -199,7 +199,7 @@ export default function Header() {
                     <a
                       key={link.href}
                       href={link.href}
-                      className="group relative flex items-start gap-4 rounded-xl border border-slate-700/50 bg-slate-800/40 p-4 transition-all duration-300 hover:translate-x-1 hover:border-cyan-500/50 hover:bg-slate-800/80"
+                      className="group relative flex items-start gap-4 rounded-xl border border-slate-700/50 bg-slate-800/40 p-4 shadow-md shadow-slate-950/50 transition-all duration-300 hover:translate-x-1 hover:border-cyan-500/50 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-slate-900/60"
                       onClick={() => setIsMobileMenuOpen(false)}
                       style={{
                         animationDelay: `${index * 50}ms`,
@@ -208,7 +208,7 @@ export default function Header() {
                           : "none",
                       }}
                     >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 transition-transform group-hover:scale-110">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 shadow-lg shadow-cyan-500/20 transition-transform group-hover:scale-110">
                         <Icon className="h-5 w-5 text-cyan-400" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -250,7 +250,7 @@ export default function Header() {
                     href="tel:+5511999999999"
                     className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-cyan-400"
                   >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <Phone className="h-4 w-4" />
                     </div>
                     <span>(11) 99999-9999</span>
@@ -259,13 +259,13 @@ export default function Header() {
                     href="mailto:contato@comsuporte.com.br"
                     className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-cyan-400"
                   >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <Mail className="h-4 w-4" />
                     </div>
                     <span>contato@comsuporte.com.br</span>
                   </a>
                   <div className="flex items-center gap-3 text-sm text-slate-400">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <MapPin className="h-4 w-4" />
                     </div>
                     <span>São Paulo, SP</span>

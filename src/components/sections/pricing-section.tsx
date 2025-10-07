@@ -99,10 +99,10 @@ export default function PricingSection() {
               return (
                 <Card
                   key={plan.name}
-                  className={`relative overflow-hidden bg-white dark:bg-slate-800 ${
+                  className={`relative overflow-hidden ${
                     plan.highlight
-                      ? "scale-105 border-cyan-500 shadow-2xl"
-                      : "border-slate-200 hover:border-cyan-500 dark:border-slate-700"
+                      ? "scale-105 border-cyan-500 shadow-2xl ring-2 shadow-cyan-500/20 ring-cyan-500/10 dark:shadow-cyan-400/20"
+                      : "border-slate-200 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400"
                   } transition-all duration-300`}
                 >
                   {plan.highlight && (
@@ -115,7 +115,7 @@ export default function PricingSection() {
 
                   <CardHeader className="pb-8 text-center">
                     <div
-                      className={`h-16 w-16 rounded-xl bg-gradient-to-br ${plan.color} mx-auto mb-4 flex items-center justify-center`}
+                      className={`h-16 w-16 rounded-xl bg-gradient-to-br ${plan.color} mx-auto mb-4 flex items-center justify-center shadow-lg shadow-slate-400/30 dark:shadow-slate-950/50`}
                     >
                       <Icon className="h-8 w-8 text-white" />
                     </div>
@@ -157,7 +157,7 @@ export default function PricingSection() {
           </div>
 
           {/* Add-ons */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800/80 dark:shadow-slate-950/50">
             <h3 className="mb-6 text-center text-2xl font-bold text-slate-900 dark:text-slate-100">
               Serviços Adicionais Disponíveis
             </h3>
@@ -177,7 +177,7 @@ export default function PricingSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center">
+          <div className="mt-12 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center shadow-2xl shadow-slate-900/50 dark:shadow-black/50">
             <h3 className="mb-4 text-3xl font-bold text-white">
               Não tem certeza qual plano escolher?
             </h3>

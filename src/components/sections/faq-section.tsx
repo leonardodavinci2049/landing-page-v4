@@ -80,7 +80,7 @@ export default function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="rounded-lg border border-slate-200 bg-white px-6 transition-colors hover:border-cyan-500 dark:border-slate-700 dark:bg-slate-800/50"
+                className="rounded-lg border border-slate-200 bg-white/80 px-6 shadow-md shadow-slate-200/50 backdrop-blur-sm transition-colors hover:border-cyan-500 dark:border-slate-700 dark:bg-slate-800/80 dark:shadow-slate-950/50"
               >
                 <AccordionTrigger className="py-6 text-left text-lg font-semibold text-slate-900 hover:text-cyan-600 dark:text-slate-100 dark:hover:text-cyan-400">
                   {faq.question}
@@ -93,7 +93,7 @@ export default function FAQSection() {
           </Accordion>
 
           {/* Bottom CTA */}
-          <div className="mt-16 rounded-2xl border border-slate-200 bg-slate-50 p-8 text-center dark:border-slate-700 dark:bg-slate-800/50">
+          <div className="mt-16 rounded-2xl border border-slate-200 bg-slate-50 p-8 text-center shadow-xl shadow-slate-200/50 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800/50 dark:shadow-slate-950/50">
             <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">
               Ainda tem dúvidas?
             </h3>

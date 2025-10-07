@@ -240,7 +240,7 @@ export default function ServicesSection() {
                   {/* Category Header */}
                   <div className="mb-6 flex items-center gap-3">
                     <div
-                      className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}
+                      className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg shadow-slate-400/30 dark:shadow-slate-950/50`}
                     >
                       <Icon className="h-6 w-6 text-white" />
                     </div>
@@ -254,8 +254,10 @@ export default function ServicesSection() {
                     {service.items.map((item) => (
                       <Card
                         key={item.title}
-                        className={`group relative overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl ${
-                          item.aiFeature ? "ring-2 ring-cyan-500/20" : ""
+                        className={`group relative overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400 ${
+                          item.aiFeature
+                            ? "ring-2 shadow-cyan-500/10 ring-cyan-500/20 dark:shadow-cyan-400/10"
+                            : ""
                         }`}
                       >
                         {/* AI Badge */}

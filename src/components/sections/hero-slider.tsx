@@ -231,7 +231,7 @@ export default function HeroSlider() {
                       <Button
                         size="lg"
                         variant="outline"
-                        className="border-slate-600 px-8 py-6 text-lg text-slate-200 hover:bg-slate-800"
+                        className="border-slate-600 px-8 py-6 text-lg text-slate-900 hover:bg-slate-800 hover:text-white dark:text-slate-200 dark:hover:bg-slate-800"
                       >
                         {slide.cta2}
                       </Button>

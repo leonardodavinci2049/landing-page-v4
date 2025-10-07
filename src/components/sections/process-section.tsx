@@ -85,12 +85,12 @@ export default function ProcessSection() {
                     <div
                       className={`flex-1 ${isEven ? "lg:text-right" : "lg:text-left"}`}
                     >
-                      <div className="group rounded-2xl border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/50">
+                      <div className="group rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-lg shadow-slate-200/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-slate-300/60 dark:border-slate-700 dark:bg-slate-800/80 dark:shadow-slate-950/50 dark:hover:shadow-slate-900/60">
                         <div
                           className={`flex items-start gap-4 ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"}`}
                         >
                           <div className="flex-shrink-0">
-                            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 transition-transform group-hover:scale-110">
+                            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/30 transition-transform group-hover:scale-110 dark:shadow-cyan-400/20">
                               <Icon className="h-8 w-8 text-white" />
                             </div>
                           </div>
@@ -125,7 +125,7 @@ export default function ProcessSection() {
                     </div>
 
                     {/* Center Number Badge */}
-                    <div className="z-10 hidden h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-cyan-500 bg-white text-xl font-bold text-cyan-600 shadow-lg lg:flex dark:bg-slate-800 dark:text-cyan-400">
+                    <div className="z-10 hidden h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-cyan-500 bg-white text-xl font-bold text-cyan-600 shadow-xl shadow-cyan-500/40 lg:flex dark:bg-slate-800 dark:text-cyan-400 dark:shadow-cyan-400/30">
                       {index + 1}
                     </div>
 
@@ -138,7 +138,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-16 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center">
+          <div className="mt-16 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center shadow-2xl shadow-slate-900/50 dark:shadow-black/50">
             <h3 className="mb-4 text-3xl font-bold text-white">
               Pronto para começar seu projeto?
             </h3>

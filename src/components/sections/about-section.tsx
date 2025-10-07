@@ -83,10 +83,10 @@ export default function AboutSection() {
 
             {/* Right Column - Image/Visual */}
             <div className="relative">
-              <div className="aspect-square rounded-2xl border border-slate-200 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 p-8 dark:border-slate-700">
-                <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900">
+              <div className="aspect-square rounded-2xl border border-slate-200 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 p-8 shadow-xl shadow-slate-200/50 dark:border-slate-700 dark:shadow-slate-950/50">
+                <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900 shadow-2xl">
                   <div className="p-8 text-center">
-                    <div className="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600">
+                    <div className="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/40">
                       <Rocket className="h-12 w-12 text-white" />
                     </div>
                     <h3 className="mb-2 text-2xl font-bold text-white">
@@ -97,7 +97,7 @@ export default function AboutSection() {
                 </div>
               </div>
               {/* Floating Badge */}
-              <div className="absolute -right-6 -bottom-6 rounded-xl border border-slate-200 bg-white p-6 shadow-xl dark:border-slate-700 dark:bg-slate-800">
+              <div className="absolute -right-6 -bottom-6 rounded-xl border border-slate-200 bg-white p-6 shadow-2xl shadow-slate-300/60 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800 dark:shadow-slate-900/60">
                 <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">
                   98%
                 </div>
@@ -115,9 +115,9 @@ export default function AboutSection() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-cyan-500 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/50"
+                  className="group rounded-xl border border-slate-200 bg-white/80 p-6 shadow-lg shadow-slate-200/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-slate-300/60 dark:border-slate-700 dark:bg-slate-800/80 dark:shadow-slate-950/50 dark:hover:shadow-slate-900/60"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 transition-transform group-hover:scale-110">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/30 transition-transform group-hover:scale-110 dark:shadow-cyan-400/20">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
