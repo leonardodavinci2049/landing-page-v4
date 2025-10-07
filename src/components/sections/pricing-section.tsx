@@ -145,7 +145,7 @@ export default function PricingSection() {
                         className={`w-full cursor-pointer px-8 py-6 text-lg ${
                           plan.highlight
                             ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-                            : "bg-slate-900 hover:bg-slate-800"
+                            : "bg-slate-900 text-white hover:bg-slate-800"
                         }`}
                         size="lg"
                       >
