@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.name}
-                className="group border-slate-200 bg-white transition-all duration-300 hover:border-cyan-500 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800"
+                className="group border-slate-200 transition-all duration-300 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400"
               >
                 <CardContent className="p-6">
                   {/* Quote Icon */}
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-8 rounded-2xl border border-slate-200 bg-slate-50 p-8 md:grid-cols-4 dark:border-slate-700 dark:bg-slate-800/50">
+          <div className="grid grid-cols-2 gap-8 rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-xl shadow-slate-200/50 backdrop-blur-sm md:grid-cols-4 dark:border-slate-700 dark:bg-slate-800/50 dark:shadow-slate-950/50">
             {[
               { value: "50+", label: "Clientes Satisfeitos" },
               { value: "98%", label: "Taxa de Satisfação" },

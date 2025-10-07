@@ -18,6 +18,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { companyInfo } from "@/lib/env";
+import Link from "next/link";
 
 export default function HeroSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -221,20 +222,24 @@ export default function HeroSlider() {
 
                     {/* CTAs */}
                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                      <Button
-                        size="lg"
-                        className={`bg-gradient-to-r ${slide.gradient} group px-8 py-6 text-lg text-white hover:opacity-90`}
-                      >
-                        {slide.cta1}
-                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                      </Button>
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="border-slate-600 px-8 py-6 text-lg text-slate-200 hover:bg-slate-800"
-                      >
-                        {slide.cta2}
-                      </Button>
+                      <Link href="/#contato">
+                        <Button
+                          size="lg"
+                          className={`cursor-pointer bg-gradient-to-r ${slide.gradient} group px-8 py-6 text-lg text-white hover:opacity-90`}
+                        >
+                          {slide.cta1}
+                          <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                        </Button>
+                      </Link>
+                      <Link href="/#servicos">
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="cursor-pointer border-slate-600 px-8 py-6 text-lg text-slate-900 hover:bg-slate-800 hover:text-white dark:text-slate-200 dark:hover:bg-slate-800"
+                        >
+                          {slide.cta2}
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
