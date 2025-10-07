@@ -68,7 +68,7 @@ export default function FAQSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Perguntas Frequentes
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-400">
+            <p className="text-xl text-slate-700 dark:text-slate-400">
               Tire suas dúvidas sobre nossos serviços e processo de trabalho
             </p>
             <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
@@ -85,7 +85,7 @@ export default function FAQSection() {
                 <AccordionTrigger className="py-6 text-left text-lg font-semibold text-slate-900 hover:text-cyan-600 dark:text-slate-100 dark:hover:text-cyan-400">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 leading-relaxed text-slate-600 dark:text-slate-300">
+                <AccordionContent className="pb-6 leading-relaxed text-slate-700 dark:text-slate-300">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -97,7 +97,7 @@ export default function FAQSection() {
             <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">
               Ainda tem dúvidas?
             </h3>
-            <p className="mb-6 text-slate-600 dark:text-slate-400">
+            <p className="mb-6 text-slate-700 dark:text-slate-400">
               Estamos aqui para ajudar! Entre em contato e teremos prazer em
               responder todas as suas perguntas.
             </p>

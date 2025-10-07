@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               O que Nossos Clientes Dizem
             </h2>
-            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+            <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
               A satisfação dos nossos clientes é a nossa maior recompensa. Veja
               alguns depoimentos de quem já transformou suas ideias em realidade
               conosco.
@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Content */}
-                  <p className="mb-6 leading-relaxed text-slate-700 italic dark:text-slate-300">
+                  <p className="mb-6 leading-relaxed text-slate-800 italic dark:text-slate-300">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
 

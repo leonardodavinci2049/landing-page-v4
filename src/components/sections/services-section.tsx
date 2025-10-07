@@ -208,7 +208,7 @@ export default function ServicesSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Nossos Serviços
             </h2>
-            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+            <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
               Soluções completas para o seu negócio digital, desde o
               desenvolvimento até a automação e hospedagem,
               <span className="font-semibold text-cyan-600">

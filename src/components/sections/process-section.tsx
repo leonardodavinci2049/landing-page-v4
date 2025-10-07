@@ -57,7 +57,7 @@ export default function ProcessSection() {
             <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Nosso Processo
             </h2>
-            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+            <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
               Transparência e eficiência em cada etapa do desenvolvimento
             </p>
             <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
@@ -101,7 +101,7 @@ export default function ProcessSection() {
                             <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">
                               {step.title}
                             </h3>
-                            <p className="mb-4 leading-relaxed text-slate-600 dark:text-slate-300">
+                            <p className="mb-4 leading-relaxed text-slate-700 dark:text-slate-300">
                               {step.description}
                             </p>
                             <ul
