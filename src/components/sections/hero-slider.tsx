@@ -152,66 +152,66 @@ export default function HeroSlider() {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 
       {/* Gradient Orbs */}
-      <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <div className="animate-blob absolute top-0 -left-4 h-72 w-72 rounded-full bg-purple-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
+      <div className="animate-blob animation-delay-2000 absolute top-0 -right-4 h-72 w-72 rounded-full bg-cyan-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
+      <div className="animate-blob animation-delay-4000 absolute -bottom-8 left-20 h-72 w-72 rounded-full bg-pink-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
 
       {/* Embla Carousel */}
-      <div className="relative z-10 h-screen" ref={emblaRef}>
+      <div className="relative z-10 h-[calc(100vh-5rem)]" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide, index) => {
             const Icon = slide.icon;
             return (
-              <div key={index} className="flex-[0_0_100%] min-w-0">
-                <div className="flex items-center justify-center h-full px-4 py-20">
-                  <div className="max-w-5xl mx-auto text-center">
+              <div key={index} className="min-w-0 flex-[0_0_100%]">
+                <div className="flex h-full items-center justify-center px-4 py-20">
+                  <div className="mx-auto max-w-5xl text-center">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-8">
-                      <Icon className="w-4 h-4 text-cyan-400" />
+                    <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-4 py-2 backdrop-blur-sm">
+                      <Icon className="h-4 w-4 text-cyan-400" />
                       <span className="text-sm text-slate-300">
                         {slide.badge}
                       </span>
                     </div>
 
                     {/* Main Headline */}
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400 leading-tight">
+                    <h1 className="mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-4xl leading-tight font-bold text-transparent md:text-6xl lg:text-7xl">
                       {slide.headline}
                     </h1>
 
                     {/* Sub-headline */}
-                    <p className="text-xl md:text-2xl text-cyan-400 font-semibold mb-4">
+                    <p className="mb-4 text-xl font-semibold text-cyan-400 md:text-2xl">
                       {slide.subheadline}
                     </p>
 
                     {/* Description */}
-                    <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    <p className="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl">
                       {slide.description}
                     </p>
 
                     {/* Benefits or Techs */}
                     {slide.benefits ? (
-                      <div className="flex flex-col gap-3 mb-8 max-w-2xl mx-auto">
+                      <div className="mx-auto mb-8 flex max-w-2xl flex-col gap-3">
                         {slide.benefits.map((benefit, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-3 text-left bg-slate-800/30 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-700/50"
+                            className="flex items-center gap-3 rounded-lg border border-slate-700/50 bg-slate-800/30 px-4 py-3 text-left backdrop-blur-sm"
                           >
-                            <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                            <Zap className="h-5 w-5 flex-shrink-0 text-cyan-400" />
                             <span className="text-slate-200">{benefit}</span>
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <div className="flex flex-wrap justify-center gap-3 mb-12">
+                      <div className="mb-12 flex flex-wrap justify-center gap-3">
                         {slide.techs?.map((tech) => (
                           <span
                             key={tech}
-                            className="px-4 py-2 rounded-lg bg-slate-800/30 border border-slate-700/50 text-slate-300 text-sm font-medium backdrop-blur-sm hover:border-cyan-500/50 transition-colors"
+                            className="rounded-lg border border-slate-700/50 bg-slate-800/30 px-4 py-2 text-sm font-medium text-slate-300 backdrop-blur-sm transition-colors hover:border-cyan-500/50"
                           >
                             {tech}
                           </span>
@@ -220,18 +220,18 @@ export default function HeroSlider() {
                     )}
 
                     {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                       <Button
                         size="lg"
-                        className={`bg-gradient-to-r ${slide.gradient} hover:opacity-90 text-white px-8 py-6 text-lg group`}
+                        className={`bg-gradient-to-r ${slide.gradient} group px-8 py-6 text-lg text-white hover:opacity-90`}
                       >
                         {slide.cta1}
-                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                       </Button>
                       <Button
                         size="lg"
                         variant="outline"
-                        className="border-slate-600 text-slate-200 hover:bg-slate-800 px-8 py-6 text-lg"
+                        className="border-slate-600 px-8 py-6 text-lg text-slate-200 hover:bg-slate-800"
                       >
                         {slide.cta2}
                       </Button>
@@ -247,23 +247,23 @@ export default function HeroSlider() {
       {/* Navigation Buttons */}
       <button
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-slate-700/50 transition-colors"
+        className="absolute top-1/2 left-4 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 text-white backdrop-blur-sm transition-colors hover:bg-slate-700/50"
         aria-label="Slide anterior"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-slate-700/50 transition-colors"
+        className="absolute top-1/2 right-4 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 text-white backdrop-blur-sm transition-colors hover:bg-slate-700/50"
         aria-label="Próximo slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="h-6 w-6" />
       </button>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
-        <div className="w-6 h-10 border-2 border-slate-600 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-slate-500 rounded-full"></div>
+      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 animate-bounce">
+        <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-slate-600 p-2">
+          <div className="h-3 w-1 rounded-full bg-slate-500"></div>
         </div>
       </div>
     </section>

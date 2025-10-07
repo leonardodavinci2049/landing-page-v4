@@ -200,34 +200,34 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50" id="servicos">
+    <section className="bg-slate-50 py-24 dark:bg-slate-950" id="servicos">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto max-w-7xl">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               Nossos Serviços
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
               Soluções completas para o seu negócio digital, desde o
               desenvolvimento até a automação e hospedagem,
-              <span className="text-cyan-600 font-semibold">
+              <span className="font-semibold text-cyan-600">
                 {" "}
                 potencializadas por Inteligência Artificial
               </span>
               .
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-6"></div>
+            <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
           </div>
 
           {/* AI Badge */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg">
-              <Bot className="w-5 h-5" />
+          <div className="mb-12 flex justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-white shadow-lg">
+              <Bot className="h-5 w-5" />
               <span className="font-semibold">
                 Serviços Potencializados por IA
               </span>
-              <Zap className="w-5 h-5" />
+              <Zap className="h-5 w-5" />
             </div>
           </div>
 
@@ -238,38 +238,38 @@ export default function ServicesSection() {
               return (
                 <div key={service.category}>
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="mb-6 flex items-center gap-3">
                     <div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}
+                      className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}
                     >
-                      <Icon className="w-6 h-6 text-white" />
+                      <Icon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                       {service.category}
                     </h3>
                   </div>
 
                   {/* Service Cards */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {service.items.map((item) => (
                       <Card
                         key={item.title}
-                        className={`hover:shadow-xl transition-all duration-300 border-slate-200 hover:border-cyan-500 group relative overflow-hidden ${
+                        className={`group relative overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl ${
                           item.aiFeature ? "ring-2 ring-cyan-500/20" : ""
                         }`}
                       >
                         {/* AI Badge */}
                         {item.aiFeature && (
                           <div className="absolute top-3 right-3 z-10">
-                            <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold shadow-lg">
-                              <Bot className="w-3 h-3" />
+                            <div className="flex items-center gap-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-2 py-1 text-xs font-semibold text-white shadow-lg">
+                              <Bot className="h-3 w-3" />
                               <span>IA</span>
                             </div>
                           </div>
                         )}
 
                         <CardHeader>
-                          <CardTitle className="text-xl group-hover:text-cyan-600 transition-colors">
+                          <CardTitle className="text-xl transition-colors group-hover:text-cyan-600">
                             {item.title}
                           </CardTitle>
                           <CardDescription className="text-base leading-relaxed">
@@ -277,7 +277,7 @@ export default function ServicesSection() {
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
-                          <div className="flex flex-wrap gap-2 mb-4">
+                          <div className="mb-4 flex flex-wrap gap-2">
                             {item.features.map((feature) => (
                               <Badge
                                 key={feature}
@@ -294,9 +294,9 @@ export default function ServicesSection() {
                               </Badge>
                             ))}
                           </div>
-                          <Button variant="ghost" className="w-full group/btn">
+                          <Button variant="ghost" className="group/btn w-full">
                             Saiba Mais
-                            <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                           </Button>
                         </CardContent>
                       </Card>
@@ -309,7 +309,7 @@ export default function ServicesSection() {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <p className="text-lg text-slate-600 mb-6">
+            <p className="mb-6 text-lg text-slate-600 dark:text-slate-400">
               Não encontrou o que procura? Entre em contato para soluções
               personalizadas com IA.
             </p>
@@ -318,7 +318,7 @@ export default function ServicesSection() {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
             >
               Solicitar Orçamento Personalizado
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

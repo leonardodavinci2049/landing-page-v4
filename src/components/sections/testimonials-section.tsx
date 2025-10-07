@@ -60,60 +60,60 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="depoimentos">
+    <section className="bg-white py-24 dark:bg-slate-900" id="depoimentos">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto max-w-7xl">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-slate-100">
               O que Nossos Clientes Dizem
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
               A satisfação dos nossos clientes é a nossa maior recompensa. Veja
               alguns depoimentos de quem já transformou suas ideias em realidade
               conosco.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-6"></div>
+            <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.name}
-                className="border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 group"
+                className="group border-slate-200 bg-white transition-all duration-300 hover:border-cyan-500 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800"
               >
                 <CardContent className="p-6">
                   {/* Quote Icon */}
                   <div className="mb-4">
-                    <Quote className="w-10 h-10 text-cyan-500 opacity-50" />
+                    <Quote className="h-10 w-10 text-cyan-500 opacity-50 dark:text-cyan-400" />
                   </div>
 
                   {/* Rating */}
-                  <div className="flex gap-1 mb-4">
+                  <div className="mb-4 flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                        className="h-5 w-5 fill-yellow-400 text-yellow-400"
                       />
                     ))}
                   </div>
 
                   {/* Content */}
-                  <p className="text-slate-700 leading-relaxed mb-6 italic">
+                  <p className="mb-6 leading-relaxed text-slate-700 italic dark:text-slate-300">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
 
                   {/* Author */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-slate-200">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg">
+                  <div className="flex items-center gap-4 border-t border-slate-200 pt-4 dark:border-slate-700">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-lg font-bold text-white">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-900 group-hover:text-cyan-600 transition-colors">
+                      <div className="font-semibold text-slate-900 transition-colors group-hover:text-cyan-600 dark:text-slate-100 dark:group-hover:text-cyan-400">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-slate-600 dark:text-slate-400">
                         {testimonial.role} • {testimonial.company}
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 bg-slate-50 rounded-2xl border border-slate-200">
+          <div className="grid grid-cols-2 gap-8 rounded-2xl border border-slate-200 bg-slate-50 p-8 md:grid-cols-4 dark:border-slate-700 dark:bg-slate-800/50">
             {[
               { value: "50+", label: "Clientes Satisfeitos" },
               { value: "98%", label: "Taxa de Satisfação" },
@@ -132,10 +132,12 @@ export default function TestimonialsSection() {
               { value: "100%", label: "Projetos Entregues" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-600 mb-2">
+                <div className="mb-2 text-3xl font-bold text-cyan-600 md:text-4xl dark:text-cyan-400">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-600">{stat.label}</div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
