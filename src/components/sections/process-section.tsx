@@ -1,4 +1,5 @@
 import { Search, Palette, Code, TestTube, Rocket } from "lucide-react";
+import Link from "next/link";
 
 export default function ProcessSection() {
   const steps = [
@@ -146,9 +147,11 @@ export default function ProcessSection() {
               Entre em contato e vamos transformar sua ideia em uma solução
               digital de sucesso.
             </p>
-            <button className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl">
-              Iniciar Conversa
-            </button>
+            <Link href="/#contato">
+              <button className="cursor-pointer rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl">
+                Iniciar Conversa
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight, Zap, Clock, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function PricingSection() {
   const plans = [
@@ -99,7 +100,7 @@ export default function PricingSection() {
               return (
                 <Card
                   key={plan.name}
-                  className={`relative overflow-hidden ${
+                  className={`relative flex flex-col overflow-hidden ${
                     plan.highlight
                       ? "scale-105 border-cyan-500 shadow-2xl ring-2 shadow-cyan-500/20 ring-cyan-500/10 dark:shadow-cyan-400/20"
                       : "border-slate-200 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400"
@@ -125,9 +126,9 @@ export default function PricingSection() {
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent>
+                  <CardContent className="flex flex-1 flex-col">
                     {/* Features */}
-                    <ul className="mb-8 space-y-3">
+                    <ul className="mb-8 flex-1 space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-500 dark:text-cyan-400" />
@@ -139,17 +140,19 @@ export default function PricingSection() {
                     </ul>
 
                     {/* CTA */}
-                    <Button
-                      className={`w-full ${
-                        plan.highlight
-                          ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-                          : "bg-slate-900 hover:bg-slate-800"
-                      }`}
-                      size="lg"
-                    >
-                      {plan.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href="/#contato" className="mt-auto">
+                      <Button
+                        className={`w-full cursor-pointer px-8 py-6 text-lg ${
+                          plan.highlight
+                            ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                            : "bg-slate-900 hover:bg-slate-800"
+                        }`}
+                        size="lg"
+                      >
+                        {plan.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               );
@@ -185,13 +188,15 @@ export default function PricingSection() {
               Entre em contato e vamos encontrar a melhor solução para o seu
               projeto. Oferecemos orçamentos personalizados sem compromisso.
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Solicitar Orçamento Personalizado
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Solicitar Orçamento Personalizado
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

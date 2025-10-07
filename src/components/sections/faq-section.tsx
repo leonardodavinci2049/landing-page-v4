@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 export default function FAQSection() {
   const faqs = [
@@ -101,9 +102,11 @@ export default function FAQSection() {
               Estamos aqui para ajudar! Entre em contato e teremos prazer em
               responder todas as suas perguntas.
             </p>
-            <button className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3 font-semibold text-white transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg">
-              Falar com Especialista
-            </button>
+            <Link href="/#contato">
+              <button className="cursor-pointer rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg font-semibold text-white transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg">
+                Falar com Especialista
+              </button>
+            </Link>
           </div>
         </div>
       </div>

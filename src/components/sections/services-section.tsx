@@ -18,6 +18,7 @@ import {
   Bot,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesSection() {
   const services = [
@@ -296,10 +297,15 @@ export default function ServicesSection() {
                               </Badge>
                             ))}
                           </div>
-                          <Button variant="ghost" className="group/btn w-full">
-                            Saiba Mais
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                          </Button>
+                          <Link href="/#contato" className="w-full">
+                            <Button
+                              variant="ghost"
+                              className="group/btn w-full"
+                            >
+                              Saiba Mais
+                              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                            </Button>
+                          </Link>
                         </CardContent>
                       </Card>
                     ))}
@@ -315,13 +321,15 @@ export default function ServicesSection() {
               Não encontrou o que procura? Entre em contato para soluções
               personalizadas com IA.
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Solicitar Orçamento Personalizado
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Solicitar Orçamento Personalizado
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function TechStackSection() {
       items: [
         { name: "PostgreSQL", description: "Banco relacional robusto" },
         { name: "MongoDB", description: "Banco NoSQL flexível" },
-        { name: "Redis", description: "Cache e message broker" },
+        { name: "MySQL", description: "Banco de dados relacional" },
         { name: "Prisma", description: "ORM moderno para Node.js" },
       ],
     },
@@ -44,7 +44,7 @@ export default function TechStackSection() {
       category: "Ferramentas",
       items: [
         { name: "Git", description: "Controle de versão" },
-        { name: "Figma", description: "Design e prototipagem" },
+        { name: "AI", description: "Desenvolvimento de Inteligência Artificial" },
         { name: "N8N", description: "Automação de workflows" },
         { name: "Postman", description: "Testes de API" },
       ],

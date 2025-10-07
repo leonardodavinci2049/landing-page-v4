@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 export default function PortfolioSection() {
   const projects = [
@@ -24,7 +25,7 @@ export default function PortfolioSection() {
       description:
         "Solução completa de ponto de venda com controle de estoque, emissão de notas fiscais e relatórios gerenciais.",
       image: "/api/placeholder/600/400",
-      tags: ["React", "Node.js", "MongoDB", "Redis"],
+      tags: ["React", "Node.js", "MongoDB", "MySQL"],
       results: [
         { metric: "99.9%", label: "Uptime" },
         { metric: "3x", label: "Mais rápido" },
@@ -144,13 +145,15 @@ export default function PortfolioSection() {
                   </div>
 
                   {/* CTA */}
-                  <Button
-                    variant="outline"
-                    className="group/btn w-full border-slate-300 hover:border-cyan-500 hover:text-cyan-600 dark:border-slate-600 dark:hover:text-cyan-400"
-                  >
-                    Ver Detalhes do Projeto
-                    <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
-                  </Button>
+                  <Link href="/#contato">
+                    <Button
+                      variant="outline"
+                      className="group/btn w-full cursor-pointer border-slate-300 px-8 py-6 text-lg hover:border-cyan-500 hover:text-cyan-600 dark:border-slate-600 dark:hover:text-cyan-400"
+                    >
+                      Ver Detalhes do Projeto
+                      <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -162,13 +165,15 @@ export default function PortfolioSection() {
               Quer ver mais projetos ou discutir como podemos ajudar seu
               negócio?
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Agendar Reunião
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Agendar Reunião
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

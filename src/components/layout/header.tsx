@@ -144,7 +144,7 @@ export default function Header() {
           <div className="hidden items-center gap-4 lg:flex">
             <ModeToggle />
             <Link href="#contato">
-              <Button className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+              <Button className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700">
                 Solicitar Orçamento
               </Button>
             </Link>
@@ -234,7 +234,7 @@ export default function Header() {
                   href="#contato"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Button className="h-14 w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-base font-semibold shadow-lg shadow-cyan-500/20 transition-all hover:from-cyan-600 hover:to-blue-700 hover:shadow-cyan-500/40">
+                  <Button className="h-14 w-full cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 text-base font-semibold shadow-lg shadow-cyan-500/20 transition-all hover:from-cyan-600 hover:to-blue-700 hover:shadow-cyan-500/40">
                     <Mail className="mr-2 h-5 w-5" />
                     Solicitar Orçamento
                   </Button>
