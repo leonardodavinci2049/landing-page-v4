@@ -1,15 +1,27 @@
 "use client";
 
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code2, Zap, ChevronLeft, ChevronRight, Bot, ShoppingCart, Sparkles, Workflow, Server, Wrench } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Zap,
+  ChevronLeft,
+  ChevronRight,
+  Bot,
+  ShoppingCart,
+  Sparkles,
+  Workflow,
+  Server,
+  Wrench,
+} from "lucide-react";
 import { companyInfo } from "@/lib/env";
 
 export default function HeroSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 7000, stopOnInteraction: false })
+    Autoplay({ delay: 7000, stopOnInteraction: false }),
   ]);
 
   const scrollPrev = useCallback(() => {
@@ -28,26 +40,28 @@ export default function HeroSlider() {
       headline: "Transforme Sua Visão Digital em Realidade",
       subheadline: `Soluções Web Full-Stack com React & Next.js pela ${companyInfo.name}`,
       description: `Desenvolvimento de ponta para empresas que buscam performance, escalabilidade e inovação. A ${companyInfo.name} oferece serviços completos de TI e desenvolvimento web.`,
-      techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+      techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
       cta1: "Solicite um Orçamento Grátis",
       cta2: "Conheça Nossos Serviços",
-      gradient: "from-cyan-500 to-blue-600"
+      gradient: "from-cyan-500 to-blue-600",
     },
     // Slide 2 - Desenvolvimento Web com IA
     {
       icon: Bot,
       badge: "Desenvolvimento Web Potencializado por IA",
       headline: "Seu Site Precisa Ser Mais que Bonito. Precisa Converter.",
-      subheadline: "Você está perdendo clientes porque seu site não transmite credibilidade?",
-      description: "Desenvolvemos sites e sistemas web com IA integrada que não apenas impressionam visualmente, mas convertem visitantes em clientes. Painéis administrativos inteligentes que preveem tendências e otimizam sua operação automaticamente.",
+      subheadline:
+        "Você está perdendo clientes porque seu site não transmite credibilidade?",
+      description:
+        "Desenvolvemos sites e sistemas web com IA integrada que não apenas impressionam visualmente, mas convertem visitantes em clientes. Painéis administrativos inteligentes que preveem tendências e otimizam sua operação automaticamente.",
       benefits: [
         "IA para análise preditiva de vendas",
         "Sistemas que aprendem com seu negócio",
-        "Performance 3x mais rápida que a concorrência"
+        "Performance 3x mais rápida que a concorrência",
       ],
       cta1: "Quero um Site Inteligente",
       cta2: "Ver Cases de Sucesso",
-      gradient: "from-purple-500 to-pink-600"
+      gradient: "from-purple-500 to-pink-600",
     },
     // Slide 3 - E-commerce
     {
@@ -55,15 +69,16 @@ export default function HeroSlider() {
       badge: "E-commerce de Alta Performance",
       headline: "Venda Mais. Venda Melhor. Venda com Inteligência Artificial.",
       subheadline: "Sua loja online está deixando dinheiro na mesa?",
-      description: "Plataformas de e-commerce B2B e B2C com IA para precificação dinâmica, recomendações personalizadas e previsão de demanda. Aumente suas vendas em até 150% com tecnologia que trabalha por você 24/7.",
+      description:
+        "Plataformas de e-commerce B2B e B2C com IA para precificação dinâmica, recomendações personalizadas e previsão de demanda. Aumente suas vendas em até 150% com tecnologia que trabalha por você 24/7.",
       benefits: [
         "Precificação inteligente com IA",
         "Checkout otimizado para conversão",
-        "Integração total com ERP e pagamentos"
+        "Integração total com ERP e pagamentos",
       ],
       cta1: "Criar Minha Loja Agora",
       cta2: "Calcular ROI",
-      gradient: "from-emerald-500 to-teal-600"
+      gradient: "from-emerald-500 to-teal-600",
     },
     // Slide 4 - Landing Pages
     {
@@ -71,31 +86,34 @@ export default function HeroSlider() {
       badge: "Landing Pages que Convertem",
       headline: "Seus Anúncios Estão Trazendo Cliques, Mas Não Vendas?",
       subheadline: "O problema não é seu tráfego. É sua landing page.",
-      description: "Landing pages criadas com IA (ChatGPT e Gemini) especializadas em conversão para Google Ads e Meta Ads. Copywriting neurocientífico, design persuasivo e integração com WhatsApp. Aumente sua taxa de conversão em até 85%.",
+      description:
+        "Landing pages criadas com IA (ChatGPT e Gemini) especializadas em conversão para Google Ads e Meta Ads. Copywriting neurocientífico, design persuasivo e integração com WhatsApp. Aumente sua taxa de conversão em até 85%.",
       benefits: [
         "Copywriting com IA e neurovendas",
         "Integração WhatsApp e redes sociais",
-        "A/B Testing automatizado"
+        "A/B Testing automatizado",
       ],
       cta1: "Aumentar Minhas Conversões",
       cta2: "Ver Exemplos",
-      gradient: "from-orange-500 to-red-600"
+      gradient: "from-orange-500 to-red-600",
     },
     // Slide 5 - Automação
     {
       icon: Workflow,
       badge: "Automação Inteligente",
       headline: "Pare de Perder Tempo com Tarefas Repetitivas.",
-      subheadline: "Sua equipe está fazendo trabalho manual que uma IA poderia fazer?",
-      description: "Automatize processos com N8N, bots inteligentes para Telegram e WhatsApp com respostas por IA. Economize até 40 horas por semana e elimine erros humanos. Sua equipe foca no que realmente importa: crescer o negócio.",
+      subheadline:
+        "Sua equipe está fazendo trabalho manual que uma IA poderia fazer?",
+      description:
+        "Automatize processos com N8N, bots inteligentes para Telegram e WhatsApp com respostas por IA. Economize até 40 horas por semana e elimine erros humanos. Sua equipe foca no que realmente importa: crescer o negócio.",
       benefits: [
         "Atendimento 24/7 com IA",
         "Integração entre todos seus sistemas",
-        "ROI em menos de 3 meses"
+        "ROI em menos de 3 meses",
       ],
       cta1: "Automatizar Meu Negócio",
       cta2: "Ver Como Funciona",
-      gradient: "from-green-500 to-emerald-600"
+      gradient: "from-green-500 to-emerald-600",
     },
     // Slide 6 - Hospedagem e Infraestrutura
     {
@@ -103,15 +121,16 @@ export default function HeroSlider() {
       badge: "Hospedagem & Infraestrutura",
       headline: "Seu Site Está Fora do Ar? Seus Clientes Estão Indo Embora.",
       subheadline: "Cada minuto offline é dinheiro perdido.",
-      description: "Infraestrutura robusta em VPS Linux com monitoramento por IA, backups automáticos e 99.9% de uptime garantido. WordPress gerenciado, deploy automatizado e performance otimizada. Durma tranquilo sabendo que seu negócio está sempre online.",
+      description:
+        "Infraestrutura robusta em VPS Linux com monitoramento por IA, backups automáticos e 99.9% de uptime garantido. WordPress gerenciado, deploy automatizado e performance otimizada. Durma tranquilo sabendo que seu negócio está sempre online.",
       benefits: [
         "99.9% de uptime garantido",
         "Monitoramento com IA 24/7",
-        "Backups automáticos diários"
+        "Backups automáticos diários",
       ],
       cta1: "Migrar Meu Site Agora",
       cta2: "Comparar Planos",
-      gradient: "from-blue-500 to-indigo-600"
+      gradient: "from-blue-500 to-indigo-600",
     },
     // Slide 7 - Serviços Técnicos
     {
@@ -119,23 +138,24 @@ export default function HeroSlider() {
       badge: "Suporte Técnico Especializado",
       headline: "Problemas Técnicos Paralisando Seu Negócio?",
       subheadline: "Cada hora parado é prejuízo. Resolva agora.",
-      description: "Suporte técnico com diagnóstico assistido por IA para identificação instantânea de problemas. Montagem, consertos, redes e software. Atendimento rápido, solução definitiva. Seu negócio não pode esperar.",
+      description:
+        "Suporte técnico com diagnóstico assistido por IA para identificação instantânea de problemas. Montagem, consertos, redes e software. Atendimento rápido, solução definitiva. Seu negócio não pode esperar.",
       benefits: [
         "Diagnóstico com IA em minutos",
         "Atendimento prioritário",
-        "Garantia de satisfação"
+        "Garantia de satisfação",
       ],
       cta1: "Solicitar Atendimento",
       cta2: "Falar com Técnico",
-      gradient: "from-yellow-500 to-amber-600"
-    }
+      gradient: "from-yellow-500 to-amber-600",
+    },
   ];
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-      
+
       {/* Gradient Orbs */}
       <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
       <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -153,7 +173,9 @@ export default function HeroSlider() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-8">
                       <Icon className="w-4 h-4 text-cyan-400" />
-                      <span className="text-sm text-slate-300">{slide.badge}</span>
+                      <span className="text-sm text-slate-300">
+                        {slide.badge}
+                      </span>
                     </div>
 
                     {/* Main Headline */}
@@ -175,7 +197,10 @@ export default function HeroSlider() {
                     {slide.benefits ? (
                       <div className="flex flex-col gap-3 mb-8 max-w-2xl mx-auto">
                         {slide.benefits.map((benefit, i) => (
-                          <div key={i} className="flex items-center gap-3 text-left bg-slate-800/30 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-700/50">
+                          <div
+                            key={i}
+                            className="flex items-center gap-3 text-left bg-slate-800/30 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-700/50"
+                          >
                             <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                             <span className="text-slate-200">{benefit}</span>
                           </div>
@@ -196,16 +221,16 @@ export default function HeroSlider() {
 
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                      <Button 
-                        size="lg" 
+                      <Button
+                        size="lg"
                         className={`bg-gradient-to-r ${slide.gradient} hover:opacity-90 text-white px-8 py-6 text-lg group`}
                       >
                         {slide.cta1}
                         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </Button>
-                      <Button 
-                        size="lg" 
-                        variant="outline" 
+                      <Button
+                        size="lg"
+                        variant="outline"
                         className="border-slate-600 text-slate-200 hover:bg-slate-800 px-8 py-6 text-lg"
                       >
                         {slide.cta2}

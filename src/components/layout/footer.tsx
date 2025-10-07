@@ -1,5 +1,6 @@
-import { Code2, Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { companyInfo } from "@/lib/env";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,26 +10,26 @@ export default function Footer() {
       { label: "Desenvolvimento Web", href: "#servicos" },
       { label: "E-commerce", href: "#servicos" },
       { label: "Automação", href: "#servicos" },
-      { label: "Hospedagem", href: "#servicos" }
+      { label: "Hospedagem", href: "#servicos" },
     ],
     empresa: [
       { label: "Sobre", href: "#sobre" },
       { label: "Portfólio", href: "#portfolio" },
       { label: "Processo", href: "#processo" },
-      { label: "Depoimentos", href: "#depoimentos" }
+      { label: "Depoimentos", href: "#depoimentos" },
     ],
     recursos: [
       { label: "Blog", href: "#" },
       { label: "Documentação", href: "#" },
       { label: "Suporte", href: "#contato" },
-      { label: "FAQ", href: "#faq" }
-    ]
+      { label: "FAQ", href: "#faq" },
+    ],
   };
 
   const socialLinks = [
     { icon: Github, label: "GitHub", url: "https://github.com" },
     { icon: Linkedin, label: "LinkedIn", url: "https://linkedin.com" },
-    { icon: Twitter, label: "Twitter", url: "https://twitter.com" }
+    { icon: Twitter, label: "Twitter", url: "https://twitter.com" },
   ];
 
   return (
@@ -39,24 +40,32 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center mb-6 group">
-              <img 
-                src="/logo.webp" 
+              <Image
+                src="/logo.webp"
                 alt={`${companyInfo.name} Logo`}
+                width={120}
+                height={40}
                 className="h-10 w-auto group-hover:scale-105 transition-transform"
               />
             </a>
             <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
-              <strong className="text-white">{companyInfo.name}</strong> - {companyInfo.title}. 
-              {companyInfo.description}
+              <strong className="text-white">{companyInfo.name}</strong> -{" "}
+              {companyInfo.title}.{companyInfo.description}
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:contato@comsuporte.com.br" className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
+              <a
+                href="mailto:contato@comsuporte.com.br"
+                className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors"
+              >
                 <Mail className="w-5 h-5" />
                 <span>contato@comsuporte.com.br</span>
               </a>
-              <a href="tel:+5511987654321" className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
+              <a
+                href="tel:+5511987654321"
+                className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors"
+              >
                 <Phone className="w-5 h-5" />
                 <span>+55 (11) 98765-4321</span>
               </a>
@@ -73,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.servicos.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
@@ -90,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
@@ -107,7 +116,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.recursos.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
@@ -126,7 +135,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-slate-500 text-sm">
-              © {currentYear} {companyInfo.name} - {companyInfo.title}. Todos os direitos reservados.
+              © {currentYear} {companyInfo.name} - {companyInfo.title}. Todos os
+              direitos reservados.
             </p>
 
             {/* Social Links */}
@@ -150,10 +160,16 @@ export default function Footer() {
 
             {/* Legal Links */}
             <div className="flex gap-6 text-sm">
-              <a href="/privacy-policy" className="text-slate-500 hover:text-cyan-400 transition-colors">
+              <a
+                href="/privacy-policy"
+                className="text-slate-500 hover:text-cyan-400 transition-colors"
+              >
                 Política de Privacidade
               </a>
-              <a href="/terms-of-service" className="text-slate-500 hover:text-cyan-400 transition-colors">
+              <a
+                href="/terms-of-service"
+                className="text-slate-500 hover:text-cyan-400 transition-colors"
+              >
                 Termos de Uso
               </a>
             </div>

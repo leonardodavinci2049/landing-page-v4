@@ -1,19 +1,22 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Globe, 
-  ShoppingCart, 
-  Layers, 
-  Sparkles, 
-  BarChart3, 
-  Workflow, 
-  MessageSquare, 
+import {
+  Globe,
+  ShoppingCart,
+  Sparkles,
+  Workflow,
   Server,
   ArrowRight,
   Wrench,
   Bot,
-  Zap
+  Zap,
 } from "lucide-react";
 
 export default function ServicesSection() {
@@ -25,23 +28,30 @@ export default function ServicesSection() {
       items: [
         {
           title: "Sites Institucionais",
-          description: "Presença online otimizada para SEO e performance, com design responsivo e moderno.",
+          description:
+            "Presença online otimizada para SEO e performance, com design responsivo e moderno.",
           features: ["SEO Otimizado", "Design Responsivo", "CMS Integrado"],
-          aiFeature: false
+          aiFeature: false,
         },
         {
           title: "Sistemas PDV",
-          description: "Soluções online para varejo com integração de estoque, pagamentos e dashboard completo.",
+          description:
+            "Soluções online para varejo com integração de estoque, pagamentos e dashboard completo.",
           features: ["Gestão de Estoque", "Pagamentos", "Dashboard Admin"],
-          aiFeature: false
+          aiFeature: false,
         },
         {
           title: "Painel Administrativo",
-          description: "Sistema completo de gestão de produtos, entrada, clientes e pedidos com IA para análise preditiva.",
-          features: ["Gestão de Produtos", "Controle de Clientes", "Análise com IA"],
-          aiFeature: true
-        }
-      ]
+          description:
+            "Sistema completo de gestão de produtos, entrada, clientes e pedidos com IA para análise preditiva.",
+          features: [
+            "Gestão de Produtos",
+            "Controle de Clientes",
+            "Análise com IA",
+          ],
+          aiFeature: true,
+        },
+      ],
     },
     {
       category: "E-commerce",
@@ -50,23 +60,30 @@ export default function ServicesSection() {
       items: [
         {
           title: "E-commerce B2B",
-          description: "Catálogos atacadistas com preços diferenciados e pedidos em lote, otimizados com IA.",
-          features: ["Catálogo B2B", "Preços Variáveis", "IA para Precificação"],
-          aiFeature: true
+          description:
+            "Catálogos atacadistas com preços diferenciados e pedidos em lote, otimizados com IA.",
+          features: [
+            "Catálogo B2B",
+            "Preços Variáveis",
+            "IA para Precificação",
+          ],
+          aiFeature: true,
         },
         {
           title: "E-commerce B2C",
-          description: "Lojas online para varejo com gestão completa de produtos e pagamentos.",
+          description:
+            "Lojas online para varejo com gestão completa de produtos e pagamentos.",
           features: ["Gestão de Produtos", "Pagamentos", "Checkout Otimizado"],
-          aiFeature: false
+          aiFeature: false,
         },
         {
           title: "WooCommerce",
-          description: "Instalação e configuração profissional do WooCommerce com otimizações e integrações.",
+          description:
+            "Instalação e configuração profissional do WooCommerce com otimizações e integrações.",
           features: ["Instalação", "Configuração", "Otimização"],
-          aiFeature: false
-        }
-      ]
+          aiFeature: false,
+        },
+      ],
     },
     {
       category: "Landing Pages",
@@ -75,23 +92,26 @@ export default function ServicesSection() {
       items: [
         {
           title: "Landing Pages para Ads",
-          description: "Páginas de alta conversão para Google Ads, Meta Ads e outras plataformas, criadas com IA.",
+          description:
+            "Páginas de alta conversão para Google Ads, Meta Ads e outras plataformas, criadas com IA.",
           features: ["Google Ads", "Meta Ads", "Copy com IA"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "Integração Social",
-          description: "Landing pages com integração WhatsApp e redes sociais para máxima conversão.",
+          description:
+            "Landing pages com integração WhatsApp e redes sociais para máxima conversão.",
           features: ["WhatsApp", "Redes Sociais", "Chat Integrado"],
-          aiFeature: false
+          aiFeature: false,
         },
         {
           title: "Marketing & Campanhas",
-          description: "Landing pages para ações de marketing com ChatGPT e Gemini para copywriting otimizado.",
+          description:
+            "Landing pages para ações de marketing com ChatGPT e Gemini para copywriting otimizado.",
           features: ["ChatGPT", "Gemini", "A/B Testing"],
-          aiFeature: true
-        }
-      ]
+          aiFeature: true,
+        },
+      ],
     },
     {
       category: "Automação",
@@ -100,23 +120,26 @@ export default function ServicesSection() {
       items: [
         {
           title: "Workflows Inteligentes",
-          description: "Integração entre sistemas e automatização de tarefas com N8N e IA para otimização.",
+          description:
+            "Integração entre sistemas e automatização de tarefas com N8N e IA para otimização.",
           features: ["N8N", "Integração", "IA Preditiva"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "Bots Telegram",
-          description: "Atendimento automatizado com IA e notificações em tempo real.",
+          description:
+            "Atendimento automatizado com IA e notificações em tempo real.",
           features: ["Atendimento IA", "Notificações", "Integração"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "Integração WhatsApp",
-          description: "Automação de mensagens e atendimento via WhatsApp com respostas inteligentes por IA.",
+          description:
+            "Automação de mensagens e atendimento via WhatsApp com respostas inteligentes por IA.",
           features: ["WhatsApp API", "Respostas IA", "Chatbot"],
-          aiFeature: true
-        }
-      ]
+          aiFeature: true,
+        },
+      ],
     },
     {
       category: "Hospedagem & Infraestrutura",
@@ -125,23 +148,26 @@ export default function ServicesSection() {
       items: [
         {
           title: "WordPress Gerenciado",
-          description: "Configuração otimizada com backups automáticos e segurança avançada.",
+          description:
+            "Configuração otimizada com backups automáticos e segurança avançada.",
           features: ["Backups", "SSL", "Segurança"],
-          aiFeature: false
+          aiFeature: false,
         },
         {
           title: "Deploy de Aplicações",
-          description: "CI/CD para aplicações React/Next.js com monitoramento e IA para otimização de performance.",
+          description:
+            "CI/CD para aplicações React/Next.js com monitoramento e IA para otimização de performance.",
           features: ["CI/CD", "Monitoramento IA", "Performance"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "VPS Linux",
-          description: "Instalação e gerenciamento completo de VPS Linux com configurações otimizadas.",
+          description:
+            "Instalação e gerenciamento completo de VPS Linux com configurações otimizadas.",
           features: ["Instalação", "Gerenciamento", "Otimização"],
-          aiFeature: false
-        }
-      ]
+          aiFeature: false,
+        },
+      ],
     },
     {
       category: "Serviços Técnico de Informática",
@@ -150,24 +176,27 @@ export default function ServicesSection() {
       items: [
         {
           title: "Montagem e Consertos",
-          description: "Montagem e consertos de computadores com diagnóstico assistido por IA para identificação rápida de problemas.",
+          description:
+            "Montagem e consertos de computadores com diagnóstico assistido por IA para identificação rápida de problemas.",
           features: ["Montagem", "Consertos", "Diagnóstico IA"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "Redes e Infraestrutura",
-          description: "Instalação e configuração de redes com otimização inteligente e monitoramento por IA.",
+          description:
+            "Instalação e configuração de redes com otimização inteligente e monitoramento por IA.",
           features: ["Instalação", "Configuração", "Monitoramento IA"],
-          aiFeature: true
+          aiFeature: true,
         },
         {
           title: "Software e Sistemas",
-          description: "Instalação e configuração de software com suporte de IA para resolução rápida de problemas.",
+          description:
+            "Instalação e configuração de software com suporte de IA para resolução rápida de problemas.",
           features: ["Instalação", "Configuração", "Suporte IA"],
-          aiFeature: true
-        }
-      ]
-    }
+          aiFeature: true,
+        },
+      ],
+    },
   ];
 
   return (
@@ -180,8 +209,13 @@ export default function ServicesSection() {
               Nossos Serviços
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Soluções completas para o seu negócio digital, desde o desenvolvimento até a automação e hospedagem, 
-              <span className="text-cyan-600 font-semibold"> potencializadas por Inteligência Artificial</span>.
+              Soluções completas para o seu negócio digital, desde o
+              desenvolvimento até a automação e hospedagem,
+              <span className="text-cyan-600 font-semibold">
+                {" "}
+                potencializadas por Inteligência Artificial
+              </span>
+              .
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-6"></div>
           </div>
@@ -190,7 +224,9 @@ export default function ServicesSection() {
           <div className="flex justify-center mb-12">
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg">
               <Bot className="w-5 h-5" />
-              <span className="font-semibold">Serviços Potencializados por IA</span>
+              <span className="font-semibold">
+                Serviços Potencializados por IA
+              </span>
               <Zap className="w-5 h-5" />
             </div>
           </div>
@@ -203,19 +239,23 @@ export default function ServicesSection() {
                 <div key={service.category}>
                   {/* Category Header */}
                   <div className="flex items-center gap-3 mb-6">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}>
+                    <div
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}
+                    >
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">{service.category}</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      {service.category}
+                    </h3>
                   </div>
 
                   {/* Service Cards */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {service.items.map((item) => (
-                      <Card 
-                        key={item.title} 
+                      <Card
+                        key={item.title}
                         className={`hover:shadow-xl transition-all duration-300 border-slate-200 hover:border-cyan-500 group relative overflow-hidden ${
-                          item.aiFeature ? 'ring-2 ring-cyan-500/20' : ''
+                          item.aiFeature ? "ring-2 ring-cyan-500/20" : ""
                         }`}
                       >
                         {/* AI Badge */}
@@ -239,23 +279,22 @@ export default function ServicesSection() {
                         <CardContent>
                           <div className="flex flex-wrap gap-2 mb-4">
                             {item.features.map((feature) => (
-                              <Badge 
-                                key={feature} 
+                              <Badge
+                                key={feature}
                                 variant="secondary"
                                 className={`${
-                                  feature.includes('IA') || feature.includes('ChatGPT') || feature.includes('Gemini')
-                                    ? 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
-                                    : 'bg-slate-100 text-slate-700 hover:bg-cyan-100 hover:text-cyan-700'
+                                  feature.includes("IA") ||
+                                  feature.includes("ChatGPT") ||
+                                  feature.includes("Gemini")
+                                    ? "bg-cyan-100 text-cyan-700 hover:bg-cyan-200"
+                                    : "bg-slate-100 text-slate-700 hover:bg-cyan-100 hover:text-cyan-700"
                                 }`}
                               >
                                 {feature}
                               </Badge>
                             ))}
                           </div>
-                          <Button 
-                            variant="ghost" 
-                            className="w-full group/btn"
-                          >
+                          <Button variant="ghost" className="w-full group/btn">
                             Saiba Mais
                             <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Button>
@@ -271,9 +310,10 @@ export default function ServicesSection() {
           {/* CTA */}
           <div className="mt-16 text-center">
             <p className="text-lg text-slate-600 mb-6">
-              Não encontrou o que procura? Entre em contato para soluções personalizadas com IA.
+              Não encontrou o que procura? Entre em contato para soluções
+              personalizadas com IA.
             </p>
-            <Button 
+            <Button
               size="lg"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
             >

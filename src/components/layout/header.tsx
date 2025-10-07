@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ModeToggle from "../theme/mode-toggle";
-
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,14 +28,14 @@ export default function Header() {
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#precos", label: "Preços" },
     { href: "#faq", label: "FAQ" },
-    { href: "#contato", label: "Contato" }
+    { href: "#contato", label: "Contato" },
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-slate-900/95 backdrop-blur-md shadow-lg" 
+        isScrolled
+          ? "bg-slate-900/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -43,9 +43,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center group">
-            <img 
-              src="/logo.webp" 
-              alt="ComSuporte Logo" 
+            <Image
+              src="/logo.webp"
+              alt="ComSuporte Logo"
+              width={120}
+              height={40}
               className="h-10 w-auto group-hover:scale-105 transition-transform"
             />
           </a>
@@ -66,9 +68,7 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <ModeToggle />
-            <Button 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
+            <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
               Solicitar Orçamento
             </Button>
           </div>
@@ -105,9 +105,7 @@ export default function Header() {
                     {link.label}
                   </a>
                 ))}
-                <Button 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4"
-                >
+                <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4">
                   Solicitar Orçamento
                 </Button>
               </div>

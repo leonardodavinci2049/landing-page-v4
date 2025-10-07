@@ -7,50 +7,56 @@ export default function TestimonialsSection() {
       name: "Carlos Silva",
       role: "CEO",
       company: "TechCommerce Brasil",
-      content: "A plataforma e-commerce desenvolvida superou todas as nossas expectativas. O aumento de 150% nas vendas no primeiro trimestre comprova a qualidade do trabalho. Profissionalismo e expertise técnica de alto nível.",
+      content:
+        "A plataforma e-commerce desenvolvida superou todas as nossas expectativas. O aumento de 150% nas vendas no primeiro trimestre comprova a qualidade do trabalho. Profissionalismo e expertise técnica de alto nível.",
       rating: 5,
-      image: "/api/placeholder/100/100"
+      image: "/api/placeholder/100/100",
     },
     {
       name: "Maria Oliveira",
       role: "Diretora de Marketing",
       company: "Varejo Plus",
-      content: "O sistema PDV transformou completamente nossa operação. A interface intuitiva facilitou o treinamento da equipe e a integração com nosso ERP foi perfeita. Recomendo fortemente!",
+      content:
+        "O sistema PDV transformou completamente nossa operação. A interface intuitiva facilitou o treinamento da equipe e a integração com nosso ERP foi perfeita. Recomendo fortemente!",
       rating: 5,
-      image: "/api/placeholder/100/100"
+      image: "/api/placeholder/100/100",
     },
     {
       name: "João Santos",
       role: "Fundador",
       company: "StartupTech",
-      content: "Precisávamos de uma landing page que convertesse e o resultado foi excepcional. A taxa de conversão de 85% fala por si. A atenção aos detalhes e o conhecimento em UX fizeram toda a diferença.",
+      content:
+        "Precisávamos de uma landing page que convertesse e o resultado foi excepcional. A taxa de conversão de 85% fala por si. A atenção aos detalhes e o conhecimento em UX fizeram toda a diferença.",
       rating: 5,
-      image: "/api/placeholder/100/100"
+      image: "/api/placeholder/100/100",
     },
     {
       name: "Ana Costa",
       role: "Gerente de TI",
       company: "Indústria Digital",
-      content: "A automação de processos com N8N economizou inúmeras horas de trabalho manual. A implementação foi rápida e o suporte contínuo garante que tudo funcione perfeitamente. Excelente investimento!",
+      content:
+        "A automação de processos com N8N economizou inúmeras horas de trabalho manual. A implementação foi rápida e o suporte contínuo garante que tudo funcione perfeitamente. Excelente investimento!",
       rating: 5,
-      image: "/api/placeholder/100/100"
+      image: "/api/placeholder/100/100",
     },
     {
       name: "Pedro Almeida",
       role: "Diretor Comercial",
       company: "Atacado Online",
-      content: "O sistema B2B desenvolvido atende perfeitamente nossas necessidades complexas de precificação e pedidos em lote. A arquitetura escalável permite nosso crescimento sem preocupações técnicas.",
+      content:
+        "O sistema B2B desenvolvido atende perfeitamente nossas necessidades complexas de precificação e pedidos em lote. A arquitetura escalável permite nosso crescimento sem preocupações técnicas.",
       rating: 5,
-      image: "/api/placeholder/100/100"
+      image: "/api/placeholder/100/100",
     },
     {
       name: "Juliana Ferreira",
       role: "Product Owner",
       company: "FinTech Solutions",
-      content: "Trabalhar com metodologia ágil e ter entregas contínuas nos deu segurança durante todo o projeto. A comunicação foi transparente e o código entregue é de altíssima qualidade. Parceria de longo prazo garantida!",
+      content:
+        "Trabalhar com metodologia ágil e ter entregas contínuas nos deu segurança durante todo o projeto. A comunicação foi transparente e o código entregue é de altíssima qualidade. Parceria de longo prazo garantida!",
       rating: 5,
-      image: "/api/placeholder/100/100"
-    }
+      image: "/api/placeholder/100/100",
+    },
   ];
 
   return (
@@ -63,7 +69,9 @@ export default function TestimonialsSection() {
               O que Nossos Clientes Dizem
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A satisfação dos nossos clientes é a nossa maior recompensa. Veja alguns depoimentos de quem já transformou suas ideias em realidade conosco.
+              A satisfação dos nossos clientes é a nossa maior recompensa. Veja
+              alguns depoimentos de quem já transformou suas ideias em realidade
+              conosco.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-6"></div>
           </div>
@@ -71,7 +79,7 @@ export default function TestimonialsSection() {
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {testimonials.map((testimonial) => (
-              <Card 
+              <Card
                 key={testimonial.name}
                 className="border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 group"
               >
@@ -84,16 +92,16 @@ export default function TestimonialsSection() {
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400" 
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
                       />
                     ))}
                   </div>
 
                   {/* Content */}
                   <p className="text-slate-700 leading-relaxed mb-6 italic">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
 
                   {/* Author */}
@@ -121,7 +129,7 @@ export default function TestimonialsSection() {
               { value: "50+", label: "Clientes Satisfeitos" },
               { value: "98%", label: "Taxa de Satisfação" },
               { value: "4.9/5", label: "Avaliação Média" },
-              { value: "100%", label: "Projetos Entregues" }
+              { value: "100%", label: "Projetos Entregues" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-600 mb-2">
