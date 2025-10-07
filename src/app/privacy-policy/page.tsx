@@ -1,0 +1,178 @@
+import { companyInfo } from "@/lib/env";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+
+export const metadata = {
+  title: `Política de Privacidade | ${companyInfo.name}`,
+  description: `Política de privacidade da ${companyInfo.name}.`,
+};
+
+export default function PrivacyPolicyPage() {
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600">
+            Política de Privacidade
+          </h1>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">1. Introdução</h2>
+            <p className="mb-4 leading-relaxed">
+              A {companyInfo.name} ("nós", "nosso", "nossa") está comprometida em proteger a privacidade dos dados de seus usuários e clientes. Esta Política de Privacidade descreve como coletamos, usamos, processamos e divulgamos suas informações, incluindo dados pessoais, em conexão com seu acesso e uso de nossos serviços e website.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Ao utilizar nossos serviços, você concorda com a coleta e uso de informações de acordo com esta política.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">2. Informações que Coletamos</h2>
+            <p className="mb-4 leading-relaxed">
+              Coletamos diferentes tipos de informações para diversas finalidades, a fim de fornecer e melhorar nossos serviços para você.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">2.1. Dados Pessoais</h3>
+            <p className="mb-4 leading-relaxed">
+              Ao utilizar nossos serviços, podemos solicitar que você nos forneça certas informações de identificação pessoal que podem ser usadas para contatá-lo ou identificá-lo ("Dados Pessoais"). As informações de identificação pessoal podem incluir, mas não se limitam a:
+            </p>
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Endereço de e-mail</li>
+              <li>Nome e sobrenome</li>
+              <li>Número de telefone</li>
+              <li>Endereço, estado, província, CEP, cidade</li>
+              <li>Cookies e Dados de Uso</li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-3">2.2. Dados de Uso</h3>
+            <p className="mb-4 leading-relaxed">
+              Também podemos coletar informações sobre como o serviço é acessado e usado ("Dados de Uso"). Esses Dados de Uso podem incluir informações como o endereço de protocolo de internet do seu computador (por exemplo, endereço IP), tipo de navegador, versão do navegador, as páginas do nosso serviço que você visita, a hora e a data da sua visita, o tempo gasto nessas páginas, identificadores exclusivos de dispositivos e outros dados de diagnóstico.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">3. Uso dos Dados</h2>
+            <p className="mb-4 leading-relaxed">
+              A {companyInfo.name} utiliza os dados coletados para diversas finalidades:
+            </p>
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Para fornecer e manter nosso serviço</li>
+              <li>Para notificá-lo sobre alterações em nosso serviço</li>
+              <li>Para permitir que você participe de recursos interativos de nosso serviço quando você optar por fazê-lo</li>
+              <li>Para fornecer suporte ao cliente</li>
+              <li>Para coletar análises ou informações valiosas para que possamos melhorar nosso serviço</li>
+              <li>Para monitorar o uso do nosso serviço</li>
+              <li>Para detectar, prevenir e resolver problemas técnicos</li>
+              <li>Para fornecer notícias, ofertas especiais e informações gerais sobre outros bens, serviços e eventos que oferecemos e que são semelhantes aos que você já comprou ou perguntou, a menos que você tenha optado por não receber tais informações.</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">4. Transferência de Dados</h2>
+            <p className="mb-4 leading-relaxed">
+              Suas informações, incluindo Dados Pessoais, podem ser transferidas para — e mantidas em — computadores localizados fora do seu estado, província, país ou outra jurisdição governamental onde as leis de proteção de dados podem ser diferentes das da sua jurisdição.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Se você estiver localizado fora do Brasil e optar por nos fornecer informações, observe que transferimos os dados, incluindo Dados Pessoais, para o Brasil e os processamos lá. Seu consentimento a esta Política de Privacidade, seguido do envio de tais informações, representa sua concordância com essa transferência.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              A {companyInfo.name} tomará todas as medidas razoavelmente necessárias para garantir que seus dados sejam tratados com segurança e de acordo com esta Política de Privacidade e nenhuma transferência de seus Dados Pessoais ocorrerá para uma organização ou um país, a menos que haja controles adequados em vigor, incluindo a segurança de seus dados e outras informações pessoais.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">5. Divulgação de Dados</h2>
+            <h3 className="text-xl font-semibold mb-3">5.1. Requisitos Legais</h3>
+            <p className="mb-4 leading-relaxed">
+              A {companyInfo.name} pode divulgar seus Dados Pessoais de boa fé, acreditando que tal ação é necessária para:
+            </p>
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Cumprir uma obrigação legal</li>
+              <li>Proteger e defender os direitos ou propriedade da {companyInfo.name}</li>
+              <li>Prevenir ou investigar possíveis irregularidades relacionadas ao Serviço</li>
+              <li>Proteger a segurança pessoal dos usuários do Serviço ou do público</li>
+              <li>Proteger contra responsabilidade legal</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">6. Segurança dos Dados</h2>
+            <p className="mb-4 leading-relaxed">
+              A segurança dos seus dados é importante para nós, mas lembre-se que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger seus Dados Pessoais, não podemos garantir sua segurança absoluta.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">7. Seus Direitos de Proteção de Dados (LGPD)</h2>
+            <p className="mb-4 leading-relaxed">
+              De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem certos direitos de proteção de dados. A {companyInfo.name} visa tomar medidas razoáveis para permitir que você corrija, altere, exclua ou limite o uso de seus Dados Pessoais.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Se você deseja ser informado sobre quais Dados Pessoais mantemos sobre você e se deseja que eles sejam removidos de nossos sistemas, entre em contato conosco.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Em certas circunstâncias, você tem os seguintes direitos de proteção de dados:
+            </p>
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>O direito de acessar, atualizar ou excluir as informações que temos sobre você.</li>
+              <li>O direito de retificação.</li>
+              <li>O direito de se opor.</li>
+              <li>O direito de restrição.</li>
+              <li>O direito à portabilidade de dados.</li>
+              <li>O direito de retirar o consentimento.</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">8. Provedores de Serviço</h2>
+            <p className="mb-4 leading-relaxed">
+              Podemos empregar empresas e indivíduos terceirizados para facilitar nosso serviço ("Provedores de Serviço"), para fornecer o serviço em nosso nome, para executar serviços relacionados ao serviço ou para nos ajudar a analisar como nosso serviço é usado.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Esses terceiros têm acesso aos seus Dados Pessoais apenas para realizar essas tarefas em nosso nome e são obrigados a não divulgá-los ou usá-los para qualquer outra finalidade.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">9. Links para Outros Sites</h2>
+            <p className="mb-4 leading-relaxed">
+              Nosso serviço pode conter links para outros sites que não são operados por nós. Se você clicar em um link de terceiros, você será direcionado para o site desse terceiro. Aconselhamos vivamente que você revise a Política de Privacidade de todos os sites que você visita.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Não temos controle e não assumimos responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">10. Privacidade de Crianças</h2>
+            <p className="mb-4 leading-relaxed">
+              Nosso serviço não se destina a menores de 18 anos ("Crianças"). Não coletamos intencionalmente informações de identificação pessoal de menores de 18 anos. Se você é pai/mãe ou responsável e sabe que seu filho nos forneceu Dados Pessoais, entre em contato conosco. Se tomarmos conhecimento de que coletamos Dados Pessoais de crianças sem verificação do consentimento dos pais, tomaremos medidas para remover essas informações de nossos servidores.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">11. Alterações a Esta Política de Privacidade</h2>
+            <p className="mb-4 leading-relaxed">
+              Podemos atualizar nossa Política de Privacidade de tempos em tempos. Iremos notificá-lo sobre quaisquer alterações, publicando a nova Política de Privacidade nesta página.
+            </p>
+            <p className="mb-4 leading-relaxed">
+              Aconselhamos que você revise esta Política de Privacidade periodicamente para quaisquer alterações. As alterações a esta Política de Privacidade são efetivas quando são publicadas nesta página.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">12. Contato</h2>
+            <p className="mb-4 leading-relaxed">
+              Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco:
+            </p>
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Por e-mail: contato@comsuporte.com.br</li>
+              <li>Pelo telefone: +55 (11) 98765-4321</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
