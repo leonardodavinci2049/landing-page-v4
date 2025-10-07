@@ -11,25 +11,26 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
+import { companyInfo } from "@/lib/env";
 
 export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
       title: "E-mail",
-      value: "contato@devfullstack.com.br",
-      link: "mailto:contato@devfullstack.com.br",
+      value: companyInfo.email,
+      link: `mailto:${companyInfo.email}`,
     },
     {
       icon: Phone,
       title: "Telefone",
-      value: "+55 (11) 98765-4321",
-      link: "tel:+5511987654321",
+      value: companyInfo.phone,
+      link: `tel:+${companyInfo.whatsapp}`,
     },
     {
       icon: MapPin,
       title: "Localização",
-      value: "São Paulo, Brasil",
+      value: companyInfo.address,
       link: null,
     },
   ];
@@ -103,7 +104,7 @@ export default function ContactSection() {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="(11) 98765-4321"
+                      placeholder={companyInfo.phone}
                       className="border-slate-700 bg-slate-900 text-white placeholder:text-slate-500 focus:border-cyan-500"
                     />
                   </div>

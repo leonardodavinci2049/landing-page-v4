@@ -20,6 +20,7 @@ import {
 import ModeToggle from "../theme/mode-toggle";
 import Image from "next/image";
 import Link from "next/link";
+import { companyInfo } from "@/lib/env";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -247,28 +248,28 @@ export default function Header() {
                 </h4>
                 <div className="space-y-3">
                   <a
-                    href="tel:+5511999999999"
+                    href={`tel:+${companyInfo.whatsapp}`}
                     className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-cyan-400"
                   >
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <Phone className="h-4 w-4" />
                     </div>
-                    <span>(11) 99999-9999</span>
+                    <span>{companyInfo.phone}</span>
                   </a>
                   <a
-                    href="mailto:contato@comsuporte.com.br"
+                    href={`mailto:${companyInfo.email}`}
                     className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-cyan-400"
                   >
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <Mail className="h-4 w-4" />
                     </div>
-                    <span>contato@comsuporte.com.br</span>
+                    <span>{companyInfo.email}</span>
                   </a>
                   <div className="flex items-center gap-3 text-sm text-slate-400">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 shadow-md shadow-slate-950/50">
                       <MapPin className="h-4 w-4" />
                     </div>
-                    <span>São Paulo, SP</span>
+                    <span>{companyInfo.address}</span>
                   </div>
                 </div>
               </div>

@@ -56,22 +56,22 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:contato@comsuporte.com.br"
+                href={`mailto:${companyInfo.email}`}
                 className="flex items-center gap-3 text-slate-400 transition-colors hover:text-cyan-400"
               >
                 <Mail className="h-5 w-5" />
-                <span>contato@comsuporte.com.br</span>
+                <span>{companyInfo.email}</span>
               </a>
               <a
-                href="tel:+5511987654321"
+                href={`tel:+${companyInfo.whatsapp}`}
                 className="flex items-center gap-3 text-slate-400 transition-colors hover:text-cyan-400"
               >
                 <Phone className="h-5 w-5" />
-                <span>+55 (11) 98765-4321</span>
+                <span>{companyInfo.phone}</span>
               </a>
               <div className="flex items-center gap-3 text-slate-400">
                 <MapPin className="h-5 w-5" />
-                <span>São Paulo, Brasil</span>
+                <span>{companyInfo.address}</span>
               </div>
             </div>
           </div>

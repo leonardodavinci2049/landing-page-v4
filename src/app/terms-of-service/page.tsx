@@ -148,8 +148,8 @@ export default function TermsOfServicePage() {
               contato conosco:
             </p>
             <ul className="mb-4 list-inside list-disc space-y-2">
-              <li>Por e-mail: contato@comsuporte.com.br</li>
-              <li>Pelo telefone: +55 (11) 98765-4321</li>
+              <li>Por e-mail: {companyInfo.email}</li>
+              <li>Pelo telefone: {companyInfo.phone}</li>
             </ul>
           </section>
         </div>
