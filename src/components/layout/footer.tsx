@@ -36,19 +36,19 @@ export default function Footer() {
     <footer className="bg-slate-950 text-slate-300">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center mb-6 group">
+            <a href="#" className="group mb-6 flex items-center">
               <Image
                 src="/logo.webp"
                 alt={`${companyInfo.name} Logo`}
                 width={120}
                 height={40}
-                className="h-10 w-auto group-hover:scale-105 transition-transform"
+                className="h-10 w-auto transition-transform group-hover:scale-105"
               />
             </a>
-            <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
+            <p className="mb-6 max-w-md leading-relaxed text-slate-400">
               <strong className="text-white">{companyInfo.name}</strong> -{" "}
               {companyInfo.title}.{companyInfo.description}
             </p>
@@ -56,35 +56,35 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:contato@comsuporte.com.br"
-                className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors"
+                href={`mailto:${companyInfo.email}`}
+                className="flex items-center gap-3 text-slate-400 transition-colors hover:text-cyan-400"
               >
-                <Mail className="w-5 h-5" />
-                <span>contato@comsuporte.com.br</span>
+                <Mail className="h-5 w-5" />
+                <span>{companyInfo.email}</span>
               </a>
               <a
-                href="tel:+5511987654321"
-                className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors"
+                href={`tel:+${companyInfo.whatsapp}`}
+                className="flex items-center gap-3 text-slate-400 transition-colors hover:text-cyan-400"
               >
-                <Phone className="w-5 h-5" />
-                <span>+55 (11) 98765-4321</span>
+                <Phone className="h-5 w-5" />
+                <span>{companyInfo.phone}</span>
               </a>
               <div className="flex items-center gap-3 text-slate-400">
-                <MapPin className="w-5 h-5" />
-                <span>São Paulo, Brasil</span>
+                <MapPin className="h-5 w-5" />
+                <span>{companyInfo.address}</span>
               </div>
             </div>
           </div>
 
           {/* Services Column */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Serviços</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Serviços</h3>
             <ul className="space-y-3">
               {footerLinks.servicos.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-400 transition-colors hover:text-cyan-400"
                   >
                     {link.label}
                   </a>
@@ -95,13 +95,13 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Empresa</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Empresa</h3>
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-400 transition-colors hover:text-cyan-400"
                   >
                     {link.label}
                   </a>
@@ -112,13 +112,13 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Recursos</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Recursos</h3>
             <ul className="space-y-3">
               {footerLinks.recursos.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-400 transition-colors hover:text-cyan-400"
                   >
                     {link.label}
                   </a>
@@ -132,11 +132,11 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             {/* Copyright */}
-            <p className="text-slate-500 text-sm">
-              © {currentYear} {companyInfo.name} - {companyInfo.title}. Todos os
-              direitos reservados.
+            <p className="text-sm text-slate-500">
+              © {currentYear} {companyInfo.name} - {companyInfo.title}. Todos
+              os direitos reservados.
             </p>
 
             {/* Social Links */}
@@ -149,10 +149,10 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-500 flex items-center justify-center transition-all hover:scale-110 group"
+                    className="group flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 shadow-lg shadow-slate-950/50 transition-all hover:scale-110 hover:border-cyan-500 hover:shadow-xl hover:shadow-slate-900/60"
                     aria-label={social.label}
                   >
-                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                    <Icon className="h-5 w-5 text-slate-400 transition-colors group-hover:text-cyan-400" />
                   </a>
                 );
               })}
@@ -162,13 +162,13 @@ export default function Footer() {
             <div className="flex gap-6 text-sm">
               <a
                 href="/privacy-policy"
-                className="text-slate-500 hover:text-cyan-400 transition-colors"
+                className="text-slate-500 transition-colors hover:text-cyan-400"
               >
                 Política de Privacidade
               </a>
               <a
                 href="/terms-of-service"
-                className="text-slate-500 hover:text-cyan-400 transition-colors"
+                className="text-slate-500 transition-colors hover:text-cyan-400"
               >
                 Termos de Uso
               </a>

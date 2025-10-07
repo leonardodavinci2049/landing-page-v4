@@ -18,6 +18,7 @@ import {
   Bot,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesSection() {
   const services = [
@@ -240,7 +241,7 @@ export default function ServicesSection() {
                   {/* Category Header */}
                   <div className="mb-6 flex items-center gap-3">
                     <div
-                      className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}
+                      className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg shadow-slate-400/30 dark:shadow-slate-950/50`}
                     >
                       <Icon className="h-6 w-6 text-white" />
                     </div>
@@ -254,8 +255,10 @@ export default function ServicesSection() {
                     {service.items.map((item) => (
                       <Card
                         key={item.title}
-                        className={`group relative overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl ${
-                          item.aiFeature ? "ring-2 ring-cyan-500/20" : ""
+                        className={`group relative overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400 ${
+                          item.aiFeature
+                            ? "ring-2 shadow-cyan-500/10 ring-cyan-500/20 dark:shadow-cyan-400/10"
+                            : ""
                         }`}
                       >
                         {/* AI Badge */}
@@ -294,10 +297,15 @@ export default function ServicesSection() {
                               </Badge>
                             ))}
                           </div>
-                          <Button variant="ghost" className="group/btn w-full">
-                            Saiba Mais
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                          </Button>
+                          <Link href="/#contato" className="w-full">
+                            <Button
+                              variant="ghost"
+                              className="group/btn w-full"
+                            >
+                              Saiba Mais
+                              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                            </Button>
+                          </Link>
                         </CardContent>
                       </Card>
                     ))}
@@ -313,13 +321,15 @@ export default function ServicesSection() {
               Não encontrou o que procura? Entre em contato para soluções
               personalizadas com IA.
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Solicitar Orçamento Personalizado
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Solicitar Orçamento Personalizado
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

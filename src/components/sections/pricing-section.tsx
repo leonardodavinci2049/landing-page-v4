@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight, Zap, Clock, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function PricingSection() {
   const plans = [
@@ -99,10 +100,10 @@ export default function PricingSection() {
               return (
                 <Card
                   key={plan.name}
-                  className={`relative overflow-hidden bg-white dark:bg-slate-800 ${
+                  className={`relative flex flex-col overflow-hidden ${
                     plan.highlight
-                      ? "scale-105 border-cyan-500 shadow-2xl"
-                      : "border-slate-200 hover:border-cyan-500 dark:border-slate-700"
+                      ? "scale-105 border-cyan-500 shadow-2xl ring-2 shadow-cyan-500/20 ring-cyan-500/10 dark:shadow-cyan-400/20"
+                      : "border-slate-200 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400"
                   } transition-all duration-300`}
                 >
                   {plan.highlight && (
@@ -115,7 +116,7 @@ export default function PricingSection() {
 
                   <CardHeader className="pb-8 text-center">
                     <div
-                      className={`h-16 w-16 rounded-xl bg-gradient-to-br ${plan.color} mx-auto mb-4 flex items-center justify-center`}
+                      className={`h-16 w-16 rounded-xl bg-gradient-to-br ${plan.color} mx-auto mb-4 flex items-center justify-center shadow-lg shadow-slate-400/30 dark:shadow-slate-950/50`}
                     >
                       <Icon className="h-8 w-8 text-white" />
                     </div>
@@ -125,9 +126,9 @@ export default function PricingSection() {
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent>
+                  <CardContent className="flex flex-1 flex-col">
                     {/* Features */}
-                    <ul className="mb-8 space-y-3">
+                    <ul className="mb-8 flex-1 space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-500 dark:text-cyan-400" />
@@ -139,17 +140,19 @@ export default function PricingSection() {
                     </ul>
 
                     {/* CTA */}
-                    <Button
-                      className={`w-full ${
-                        plan.highlight
-                          ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-                          : "bg-slate-900 hover:bg-slate-800"
-                      }`}
-                      size="lg"
-                    >
-                      {plan.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href="/#contato" className="mt-auto">
+                      <Button
+                        className={`w-full cursor-pointer px-8 py-6 text-lg ${
+                          plan.highlight
+                            ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                            : "bg-slate-900 hover:bg-slate-800"
+                        }`}
+                        size="lg"
+                      >
+                        {plan.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               );
@@ -157,7 +160,7 @@ export default function PricingSection() {
           </div>
 
           {/* Add-ons */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800/80 dark:shadow-slate-950/50">
             <h3 className="mb-6 text-center text-2xl font-bold text-slate-900 dark:text-slate-100">
               Serviços Adicionais Disponíveis
             </h3>
@@ -177,7 +180,7 @@ export default function PricingSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center">
+          <div className="mt-12 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-900 to-slate-800 p-12 text-center shadow-2xl shadow-slate-900/50 dark:shadow-black/50">
             <h3 className="mb-4 text-3xl font-bold text-white">
               Não tem certeza qual plano escolher?
             </h3>
@@ -185,13 +188,15 @@ export default function PricingSection() {
               Entre em contato e vamos encontrar a melhor solução para o seu
               projeto. Oferecemos orçamentos personalizados sem compromisso.
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Solicitar Orçamento Personalizado
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Solicitar Orçamento Personalizado
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

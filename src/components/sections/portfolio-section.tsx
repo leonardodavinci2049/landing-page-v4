@@ -2,14 +2,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 export default function PortfolioSection() {
   const projects = [
     {
-      title: "Plataforma E-commerce B2B",
+      title: "Plataforma E-commerce B2B/B2C",
       category: "E-commerce",
       description:
-        "Sistema completo de vendas atacadistas com catálogo dinâmico, gestão de pedidos em lote e integração com ERP.",
+        "Sistema completo de vendas atacadistas e Varejistas com integração de estoque, pagamentos e dashboard admin catálogo dinâmico, gestão de pedidos em lote e integração com ERP.",
       image: "/api/placeholder/600/400",
       tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
       results: [
@@ -19,12 +20,12 @@ export default function PortfolioSection() {
       color: "from-purple-500 to-pink-600",
     },
     {
-      title: "Sistema PDV para Varejo",
-      category: "Sistema Corporativo",
+      title: "Sistema ERP/PDV para Lojistas",
+      category: "Sistema ERP",
       description:
         "Solução completa de ponto de venda com controle de estoque, emissão de notas fiscais e relatórios gerenciais.",
       image: "/api/placeholder/600/400",
-      tags: ["React", "Node.js", "MongoDB", "Redis"],
+      tags: ["React", "Node.js", "MongoDB", "MySQL"],
       results: [
         { metric: "99.9%", label: "Uptime" },
         { metric: "3x", label: "Mais rápido" },
@@ -33,7 +34,7 @@ export default function PortfolioSection() {
     },
     {
       title: "Landing Page de Alta Conversão",
-      category: "Marketing Digital",
+      category: "Landing Page",
       description:
         "Página otimizada para captação de leads com A/B testing, analytics avançado e integração com CRM.",
       image: "/api/placeholder/600/400",
@@ -45,17 +46,17 @@ export default function PortfolioSection() {
       color: "from-orange-500 to-red-600",
     },
     {
-      title: "Plataforma de Comparação de Preços",
-      category: "Marketplace",
+      title: "Assistência Técnica em Informática",
+      category: "Serviços Técnicos",
       description:
-        "Sistema de scraping e comparação de preços com dashboard analítico e sistema de afiliação integrado.",
+        "Suporte técnico especializado com diagnóstico assistido por IA, montagem e conserto de computadores, instalação de redes e configuração de software para empresas e residências.",
       image: "/api/placeholder/600/400",
-      tags: ["Python", "React", "PostgreSQL", "AWS"],
+      tags: ["Diagnóstico IA", "Redes", "Hardware", "Software"],
       results: [
-        { metric: "50k+", label: "Produtos indexados" },
-        { metric: "10k", label: "Usuários ativos" },
+        { metric: "98%", label: "Satisfação" },
+        { metric: "24h", label: "Tempo médio" },
       ],
-      color: "from-green-500 to-emerald-600",
+      color: "from-yellow-500 to-amber-600",
     },
   ];
 
@@ -80,7 +81,7 @@ export default function PortfolioSection() {
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="group overflow-hidden border-slate-200 bg-white transition-all duration-300 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800"
+                className="group overflow-hidden border-slate-200 transition-all duration-300 hover:border-cyan-500 dark:border-slate-700 dark:hover:border-cyan-400"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-900 dark:to-black">
@@ -127,7 +128,7 @@ export default function PortfolioSection() {
                   </div>
 
                   {/* Results */}
-                  <div className="mb-6 grid grid-cols-2 gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/50">
+                  <div className="mb-6 grid grid-cols-2 gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-md shadow-slate-200/50 dark:border-slate-700 dark:bg-slate-900/50 dark:shadow-slate-950/50">
                     {project.results.map((result) => (
                       <div key={result.label} className="text-center">
                         <div className="mb-1 flex items-center justify-center gap-1">
@@ -144,13 +145,15 @@ export default function PortfolioSection() {
                   </div>
 
                   {/* CTA */}
-                  <Button
-                    variant="outline"
-                    className="group/btn w-full border-slate-300 hover:border-cyan-500 hover:text-cyan-600 dark:border-slate-600 dark:hover:text-cyan-400"
-                  >
-                    Ver Detalhes do Projeto
-                    <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
-                  </Button>
+                  <Link href="/#contato">
+                    <Button
+                      variant="outline"
+                      className="group/btn w-full cursor-pointer border-slate-300 px-8 py-6 text-lg hover:border-cyan-500 hover:text-cyan-600 dark:border-slate-600 dark:hover:text-cyan-400"
+                    >
+                      Ver Detalhes do Projeto
+                      <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -162,13 +165,15 @@ export default function PortfolioSection() {
               Quer ver mais projetos ou discutir como podemos ajudar seu
               negócio?
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-            >
-              Agendar Reunião
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/#contato">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-6 text-lg hover:from-cyan-600 hover:to-blue-700"
+              >
+                Agendar Reunião
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
